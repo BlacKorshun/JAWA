@@ -58,6 +58,9 @@ def open_recipes_page():
     # Открываем сайт с рецептами
     import webbrowser
     webbrowser.open("https://eda.ru/recepty")
+def open_employees():
+    # Открываем новое окно сотрудники
+    employees_window = tk.Toplevel(root)
 
 # Создаем главное окно
 root = tk.Tk()
@@ -65,7 +68,7 @@ root.title("Главное меню")
 
 # Создаем кнопки
 menu_button = tk.Button(root, text="Меню", command=open_menu)
-employees_button = tk.Button(root, text="Сотрудники")
+employees_button = tk.Button(root, text="Сотрудники", command=open_employees)
 dealers_button = tk.Button(root, text="Дилеры")
 inventory_button = tk.Button(root, text="Инвентаризация")
 accounting_button = tk.Button(root, text="Бухгалтерия")
